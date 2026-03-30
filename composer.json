@@ -1,0 +1,26 @@
+{
+	"name": "base3/tumblr-communication",
+	"description": "Provides Tumblr communication for BASE3 using tumblr/tumblr and OAuth 1.",
+	"type": "library",
+	"require": {
+		"php": ">=8.1",
+		"tumblr/tumblr": "^0.4.2",
+		"league/oauth1-client": "^1.11"
+	},
+	"autoload": {
+		"psr-4": {
+			"TumblrCommunication\\": "src/"
+		}
+	},
+	"authors": [
+		{
+			"name": "Daniel Dahme",
+			"email": "info@base3.de"
+		}
+	],
+	"minimum-stability": "stable",
+	"prefer-stable": true,
+	"_base3": {
+		"merge": true
+	}
+}
