@@ -1,15 +1,30 @@
 <?php declare(strict_types=1);
 
-namespace TumblrCommunication\Service;
+/***********************************************************************
+ * This file is part of TumblrCommunication for BASE3 Framework.
+ *
+ * TumblrCommunication delivers communication posts to Tumblr.
+ * Its publisher implements CommunicationFoundation contracts.
+ * Provider-specific delivery uses the existing service APIs.
+ *
+ * Developed by Daniel Dahme
+ * Licensed under GPL-3.0
+ * https://www.gnu.org/licenses/gpl-3.0.en.html
+ *
+ * https://base3.de
+ ***********************************************************************/
 
-use Base3\Configuration\Api\IConfiguration;
-use CommunicationFoundation\Api\ICommunicationPost;
-use CommunicationFoundation\Api\ICommunicationPostMedia;
-use CommunicationFoundation\Api\ICommunicationPublishRequest;
-use CommunicationFoundation\Api\ICommunicationPublishResult;
-use CommunicationFoundation\Api\ICommunicationPublisher;
-use CommunicationFoundation\Exception\CommunicationPublishException;
-use CommunicationFoundation\Model\CommunicationPublishResult;
+
+namespace Base3\TumblrCommunication\Service;
+
+use Base3\CoreFoundation\Configuration\Api\IConfiguration;
+use Base3\CommunicationFoundation\Api\ICommunicationPost;
+use Base3\CommunicationFoundation\Api\ICommunicationPostMedia;
+use Base3\CommunicationFoundation\Api\ICommunicationPublishRequest;
+use Base3\CommunicationFoundation\Api\ICommunicationPublishResult;
+use Base3\CommunicationFoundation\Api\ICommunicationPublisher;
+use Base3\CommunicationFoundation\Exception\CommunicationPublishException;
+use Base3\CommunicationFoundation\Model\CommunicationPublishResult;
 use Throwable;
 use Tumblr\API\Client as TumblrClient;
 

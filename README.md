@@ -15,7 +15,7 @@ The plugin is functional and already able to publish posts to Tumblr from within
 At the moment, the implementation is intentionally small and focused on the core publishing flow:
 
 * configuration is loaded via BASE3 `IConfiguration`
-* publishing is performed through `TumblrCommunication\Service\TumblrPublisher`
+* publishing is performed through `Base3\TumblrCommunication\Service\TumblrPublisher`
 * the publisher implements `ICommunicationPublisher`
 * application code can stay provider-neutral by depending on the communication contracts
 
@@ -71,7 +71,7 @@ A typical flow looks like this:
 4. Pass the request to an `ICommunicationPublisher`
 5. Receive a normalized `ICommunicationPublishResult`
 
-In a Tumblr-specific setup, the injected publisher implementation is usually `TumblrCommunication\Service\TumblrPublisher`.
+In a Tumblr-specific setup, the injected publisher implementation is usually `Base3\TumblrCommunication\Service\TumblrPublisher`.
 
 ---
 
@@ -123,8 +123,8 @@ TumblrCommunication/
 
 Typical classes include:
 
-* `TumblrCommunication\Service\TumblrPublisher`
-* `TumblrCommunication\Example\TumblrPostExample`
+* `Base3\TumblrCommunication\Service\TumblrPublisher`
+* `Base3\TumblrCommunication\Example\TumblrPostExample`
 
 The generic contracts, models and base exceptions are intentionally provided by `CommunicationFoundation` and not duplicated inside this plugin.
 
@@ -257,10 +257,10 @@ Your application should usually depend on `ICommunicationPublisher` and not dire
 ```php
 <?php declare(strict_types=1);
 
-use CommunicationFoundation\Api\ICommunicationPublisher;
-use CommunicationFoundation\Model\CommunicationPost;
-use CommunicationFoundation\Model\CommunicationPostMedia;
-use CommunicationFoundation\Model\CommunicationPublishRequest;
+use Base3\CommunicationFoundation\Api\ICommunicationPublisher;
+use Base3\CommunicationFoundation\Model\CommunicationPost;
+use Base3\CommunicationFoundation\Model\CommunicationPostMedia;
+use Base3\CommunicationFoundation\Model\CommunicationPublishRequest;
 
 class ExamplePostingService
 {
@@ -316,7 +316,7 @@ $request = new CommunicationPublishRequest(
 
 The plugin currently includes a runnable example output:
 
-* `TumblrCommunication\Example\TumblrPostExample`
+* `Base3\TumblrCommunication\Example\TumblrPostExample`
 
 This example:
 
@@ -513,7 +513,7 @@ Example:
 ```php
 <?php declare(strict_types=1);
 
-use CommunicationFoundation\Exception\CommunicationPublishException;
+use Base3\CommunicationFoundation\Exception\CommunicationPublishException;
 
 try {
 	$result = $publisher->publish($request);
@@ -560,10 +560,10 @@ A common application-level service might look like this:
 
 namespace App\Service;
 
-use CommunicationFoundation\Api\ICommunicationPublisher;
-use CommunicationFoundation\Model\CommunicationPost;
-use CommunicationFoundation\Model\CommunicationPostMedia;
-use CommunicationFoundation\Model\CommunicationPublishRequest;
+use Base3\CommunicationFoundation\Api\ICommunicationPublisher;
+use Base3\CommunicationFoundation\Model\CommunicationPost;
+use Base3\CommunicationFoundation\Model\CommunicationPostMedia;
+use Base3\CommunicationFoundation\Model\CommunicationPublishRequest;
 
 class TumblrPostingService
 {

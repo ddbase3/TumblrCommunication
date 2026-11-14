@@ -9,7 +9,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"TumblrCommunication\\": "src/"
+			"Base3\\TumblrCommunication\\": "src/"
 		}
 	},
 	"authors": [

@@ -1,0 +1,12 @@
+{
+	"manifestVersion": 1,
+	"name": "TumblrCommunication",
+	"namespace": "Base3\\TumblrCommunication",
+	"version": "0.0.0",
+	"description": "TumblrCommunication delivers communication posts to Tumblr. Its publisher implements CommunicationFoundation contracts. Provider-specific delivery uses the existing service APIs.",
+	"license": "GPL-3.0",
+	"dependencies": {
+		"CommunicationFoundation": ">=0.0.0",
+		"CoreFoundation": ">=4.10.0"
+	}
+}

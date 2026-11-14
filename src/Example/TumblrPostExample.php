@@ -1,12 +1,27 @@
 <?php declare(strict_types=1);
 
-namespace TumblrCommunication\Example;
+/***********************************************************************
+ * This file is part of TumblrCommunication for BASE3 Framework.
+ *
+ * TumblrCommunication delivers communication posts to Tumblr.
+ * Its publisher implements CommunicationFoundation contracts.
+ * Provider-specific delivery uses the existing service APIs.
+ *
+ * Developed by Daniel Dahme
+ * Licensed under GPL-3.0
+ * https://www.gnu.org/licenses/gpl-3.0.en.html
+ *
+ * https://base3.de
+ ***********************************************************************/
 
-use Base3\Api\IOutput;
-use CommunicationFoundation\Api\ICommunicationPublisher;
-use CommunicationFoundation\Model\CommunicationPost;
-use CommunicationFoundation\Model\CommunicationPostMedia;
-use CommunicationFoundation\Model\CommunicationPublishRequest;
+
+namespace Base3\TumblrCommunication\Example;
+
+use Base3\CoreFoundation\Api\IOutput;
+use Base3\CommunicationFoundation\Api\ICommunicationPublisher;
+use Base3\CommunicationFoundation\Model\CommunicationPost;
+use Base3\CommunicationFoundation\Model\CommunicationPostMedia;
+use Base3\CommunicationFoundation\Model\CommunicationPublishRequest;
 use RuntimeException;
 use Throwable;
 

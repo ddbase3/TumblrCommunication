@@ -1,12 +1,27 @@
 <?php declare(strict_types=1);
 
-namespace TumblrCommunication;
+/***********************************************************************
+ * This file is part of TumblrCommunication for BASE3 Framework.
+ *
+ * TumblrCommunication delivers communication posts to Tumblr.
+ * Its publisher implements CommunicationFoundation contracts.
+ * Provider-specific delivery uses the existing service APIs.
+ *
+ * Developed by Daniel Dahme
+ * Licensed under GPL-3.0
+ * https://www.gnu.org/licenses/gpl-3.0.en.html
+ *
+ * https://base3.de
+ ***********************************************************************/
 
-use Base3\Api\IContainer;
-use Base3\Api\IPlugin;
-use Base3\Configuration\Api\IConfiguration;
-use CommunicationFoundation\Api\ICommunicationPublisher;
-use TumblrCommunication\Service\TumblrPublisher;
+
+namespace Base3\TumblrCommunication;
+
+use Base3\CoreFoundation\Api\IContainer;
+use Base3\CoreFoundation\Api\IPlugin;
+use Base3\CoreFoundation\Configuration\Api\IConfiguration;
+use Base3\CommunicationFoundation\Api\ICommunicationPublisher;
+use Base3\TumblrCommunication\Service\TumblrPublisher;
 
 class TumblrCommunicationPlugin implements IPlugin {
 
