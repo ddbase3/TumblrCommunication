@@ -2,11 +2,19 @@
 	"manifestVersion": 1,
 	"name": "TumblrCommunication",
 	"namespace": "Base3\\TumblrCommunication",
-	"version": "0.0.0",
+	"version": "5.0.0",
 	"description": "TumblrCommunication delivers communication posts to Tumblr. Its publisher implements CommunicationFoundation contracts. Provider-specific delivery uses the existing service APIs.",
-	"license": "GPL-3.0",
+	"license": "GPL-3.0-or-later",
+	"maintainers": [
+		{
+			"name": "Daniel Dahme",
+			"url": "https://www.base3.de",
+			"email": "info@base3.de"
+		}
+	],
+	"repository": "https://github.com/ddbase3/TumblrCommunication",
 	"dependencies": {
-		"CommunicationFoundation": ">=0.0.0",
-		"CoreFoundation": ">=4.10.0"
+		"CommunicationFoundation": ">=5.0.0",
+		"CoreFoundation": ">=5.0.0"
 	}
 }
